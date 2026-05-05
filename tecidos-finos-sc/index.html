@@ -253,8 +253,10 @@
     .hero { padding: 24px; }
     .hero h1 { font-size: 1.4rem; }
     .conv-row { grid-template-columns: 90px 1fr; }
-    .glass-card { overflow: hidden; }
+    .glass-card { overflow: visible; }
     canvas { max-width: 100% !important; height: auto !important; }
+    .glass-card { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .data-table { min-width: 460px; }
     .comp-grid { grid-template-columns: 1fr !important; }
     .comp-grid > div:nth-child(2) { display: none; }
     .conv-meta { font-size: 0.71rem; word-break: break-word; }
