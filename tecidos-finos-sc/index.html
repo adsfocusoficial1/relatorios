@@ -35,7 +35,7 @@
     display: flex; align-items: center; justify-content: space-between;
     flex-wrap: wrap; gap: 16px; overflow: hidden;
   }
-  header img { height: 70px; width: auto; transform: none; }
+  header img { width: 220px; height: auto; transform: none; max-height: 80px; object-fit: contain; object-position: left center; }
   .header-meta { text-align: right; }
   .header-meta h2 { font-size: 1rem; font-weight: 700; color: var(--white); }
   .header-meta p { font-size: 0.78rem; color: rgba(255,255,255,0.4); margin-top: 2px; }
@@ -231,8 +231,10 @@
     display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
     background: rgba(0,13,46,0.85); backdrop-filter: blur(12px); overflow: hidden;
   }
-  footer img { height: 70px; width: auto; transform: none; }
+  footer img { width: 220px; height: auto; transform: none; max-height: 80px; object-fit: contain; object-position: left center; }
   footer p { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+
+  .kpi-grid-4 { grid-template-columns: repeat(4,1fr); }
 
   @media (max-width: 768px) {
     main { padding: 28px 16px 60px; }
@@ -243,7 +245,10 @@
     .bar-row { grid-template-columns: 110px 1fr auto; }
     .bar-label { font-size: 0.72rem; }
     .kpi-grid { grid-template-columns: 1fr 1fr; }
-    .kpi-value { font-size: 1.6rem; }
+    .kpi-grid-4 { grid-template-columns: 1fr 1fr; }
+    .mini-kpi-grid { grid-template-columns: 1fr 1fr !important; }
+    .kpi-value { font-size: 1.3rem; }
+    .kpi-label { font-size: 0.6rem; }
     .toc-bar { padding: 0 16px; overflow-x: auto; }
     .hero { padding: 24px; }
     .hero h1 { font-size: 1.4rem; }
@@ -449,7 +454,7 @@
   </div>
 </div>
 
-<div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);">
+<div class="kpi-grid kpi-grid-4">
   <div class="kpi-card blue">
     <span class="kpi-icon">🖱</span>
     <div class="kpi-label">Visitas via busca</div>
@@ -558,7 +563,7 @@
 </div>
 
 <!-- KPIs: resumo total apenas — sem repetir o que a tabela mostra -->
-<div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);">
+<div class="kpi-grid kpi-grid-4">
   <div class="kpi-card green">
     <span class="kpi-icon">🛒</span>
     <div class="kpi-label">Compras geradas</div>
